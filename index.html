@@ -4,6 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <!-- Sora font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <!-- Adam font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
     <!--DaisyUI and Tailwindcss -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -13,6 +23,8 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        'maincolor': '#FFDC26',
+                        'mainbg': '#FFF9F4'
                     }
                 }
             }
@@ -24,6 +36,86 @@
 <body>
     <!-- Header section -->
     <header>
+        <div class="bg-mainbg lg:py-2 mb-20">
+            <nav class="container mx-auto">
+                <div class="navbar">
+                    <div class="navbar-start">
+
+                        <div class="flex items-center gap-2">
+                            <img src="c1-assets/logo-header.png" class="w-8">
+                            <h1 class="text-xl font-bold hidden lg:inline">Browse<span
+                                    class="text-maincolor">4</span>Pets
+                            </h1>
+                        </div>
+
+                    </div>
+                    <div class="navbar-center hidden lg:flex">
+                        <ul class="menu menu-horizontal px-1">
+                            <li><a>Find a pet</a></li>
+                            <li><a>Breeds</a></li>
+                            <li><a>Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar-end">
+                        <div class="dropdown dropdown-end">
+                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                </svg>
+
+                            </div>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                                <li><a>Find a pet</a></li>
+                                <li><a>Breeds</a></li>
+                                <li><a>Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div class="hidden lg:flex lg:items-center lg:justify-end lg:gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>
+
+                            <button class="btn btn-outline border-solid border-1 border-maincolor px-8">Login</button>
+                            <button class="btn bg-maincolor px-8">Register</button>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Hero Section -->
+        <section class="container mx-auto relative px-2 mb-20">
+            <!-- Hero Text -->
+            <div class="text-left absolute w-2/3 md:w-1/2 top-0 z-10 space-y-5">
+                <h1 class="font-adam  text-3xl md:text-5xl">Pamper Your Pet, <br> They Deserve <br>the Bes</h1>
+                <p class="font-sora text-xs  md:text-sm">Discover a world of treats, toys, and essentials handpicked
+                    for
+                    your furry
+                    friends.
+                    Shop now and make
+                    tails wag with joy!</p>
+                <div>
+                    <button class="btn bg-maincolor px-8">Find a Pet</button>
+                </div>
+
+            </div>
+            <!-- hero image -->
+
+            <div class="absolute top-36 md:top-0">
+                <img src="c1-assets/cat-big.png">
+            </div>
+        </section>
 
     </header>
 
