@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+
     <!--DaisyUI and Tailwindcss -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -24,19 +25,30 @@
                     colors: {
                         clifford: '#da373d',
                         'maincolor': '#FFDC26',
-                        'mainbg': '#FFF9F4'
+                        'mainbg': '#FFF9F4',
+                        'maincard': '#F9DF8A'
                     }
                 }
             }
         }
     </script>
     <title>Pet Shop</title>
+    <style>
+        .font-sora {
+            font-family: "Sora", serif;
+        }
+
+        .font-adam {
+            font-family: "ADLaM Display", serif;
+        }
+    </style>
 </head>
 
-<body>
+<body class="font-sora ">
     <!-- Header section -->
-    <header>
-        <div class="bg-mainbg lg:py-2 mb-20">
+    <header class="relative">
+        <!-- Navbar -->
+        <div class="bg-mainbg lg:py-2">
             <nav class="container mx-auto">
                 <div class="navbar">
                     <div class="navbar-start">
@@ -95,7 +107,7 @@
             </nav>
         </div>
         <!-- Hero Section -->
-        <section class="container mx-auto relative px-2 mb-20">
+        <section class="container mx-auto px-2 my-10 relative">
             <!-- Hero Text -->
             <div class="text-left absolute w-2/3 md:w-1/2 top-0 z-10 space-y-5">
                 <h1 class="font-adam  text-3xl md:text-5xl">Pamper Your Pet, <br> They Deserve <br>the Bes</h1>
@@ -112,20 +124,77 @@
             </div>
             <!-- hero image -->
 
-            <div class="absolute top-36 md:top-0">
+            <div class="relative top-32 md:top-0">
+
                 <img src="c1-assets/cat-big.png">
             </div>
         </section>
 
+
     </header>
 
     <!-- Main Section -->
-    <main>
+    <main class="container mx-auto">
+        <!-- Categories Section -->
+        <section class="mt-48 md:my-24 mx-4">
+            <div class="flex  justify-start flex-col gap-10">
+                <h1 class="text-2xl font-bold font-adam md:text-4xl">
+                    Browse By Categories
+                </h1>
 
+                <!-- Cards -->
+                <div class="grid grid-cols-2 md:grid-cols-6  gap-2 md:gap-4">
+                    <div
+                        class="flex flex-col gap-4 items-center justify-center border-solid border-1 border-maincolor bg-maincard rounded-xl p-8">
+                        <div class="bg-white rounded-full p-8 "><img src=" c1-assets/dog-cartoon.png"></div>
+
+                        <h2 class="font-adam font-bold md:text-xl">Dog</h2>
+                        <small class="md:text-xl">3 Items</small>
+                    </div>
+                    <div
+                        class="flex flex-col gap-4 items-center justify-center border-solid border-1 border-maincolor bg-maincard rounded-xl p-8">
+                        <div class="bg-white rounded-full p-8"><img src="c1-assets/fish-cartoon.png"></div>
+
+                        <h2 class="font-adam font-bold md:text-xl">Fish</h2>
+                        <small class="md:text-xl">3 Items</small>
+                    </div>
+                    <div
+                        class="flex flex-col gap-4 items-center justify-center border-solid border-1 border-maincolor bg-maincard rounded-xl p-8">
+                        <div class="bg-white rounded-full p-8"> <img src="c1-assets/cat-cartoon.png"></div>
+
+                        <h2 class="font-adam font-bold md:text-xl">Cat</h2>
+                        <small class="md:text-xl">3 Items</small>
+                    </div>
+                    <div
+                        class="flex flex-col gap-4 items-center justify-center border-solid border-1 border-maincolor bg-maincard rounded-xl p-8">
+                        <div class="bg-white rounded-full p-8"><img src="c1-assets/bird-cartoon.png"></div>
+
+                        <h2 class="font-adam font-bold md:text-xl">Bird</h2>
+                        <small class="md:text-xl">3 Items</small>
+                    </div>
+                    <div
+                        class="flex flex-col gap-4 items-center justify-center border-solid border-1 border-maincolor bg-maincard rounded-xl p-8">
+                        <div class="bg-white rounded-full p-8"><img src="c1-assets/mouse-cartoon.png"></div>
+
+                        <h2 class="font-adam font-bold md:text-xl">Small pet</h2>
+                        <small class="md:text-xl">3 Items</small>
+                    </div>
+                    <div
+                        class="flex flex-col gap-4 items-center justify-center border-solid border-1 border-maincolor bg-maincard rounded-xl p-8">
+                        <div class="bg-white rounded-full p-8"><img src="c1-assets/rabbit-cartoon.png"></div>
+
+                        <h2 class="font-adam font-bold md:text-xl">Rabbit</h2>
+                        <small class="md:text-xl">2 Items</small>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
     </main>
 
     <!-- footer section -->
-    <footer>
+    <footer class="lg:container mx-auto">
 
     </footer>
 
